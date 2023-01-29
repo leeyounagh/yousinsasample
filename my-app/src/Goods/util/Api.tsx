@@ -25,7 +25,7 @@ const Api = () => {
         setData((prev) => [...prev, ...res.data.items]);
       })
       .catch((e) => {});
-  }, []);
+  }, [data]);
 
   return (
     <Container>
