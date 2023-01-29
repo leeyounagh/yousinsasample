@@ -21,7 +21,8 @@ const Api = () => {
         },
       })
       .then((res) => {
-        setData((prev) => [...prev, ...res.data.items]);
+        console.log(res);
+        // setData((prev) => [...prev, ...res.data.items]);
       })
       .catch((e) => {});
   }, []);
@@ -29,7 +30,7 @@ const Api = () => {
   return (
     <Container>
       <Row xs={1} md={3} className="g-4 d-flex justify-content-center">
-        {data.map((item) => {
+        {/* {data.map((item) => {
           return (
             <>
               <Col>
@@ -50,7 +51,7 @@ const Api = () => {
               </Col>
             </>
           );
-        })}
+        })} */}
       </Row>
     </Container>
   );
