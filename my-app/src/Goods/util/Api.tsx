@@ -21,8 +21,8 @@ const Api = () => {
         },
       })
       .then((res) => {
-        console.log(res);
-        // setData((prev) => [...prev, ...res.data.items]);
+        console.log(res, data);
+        setData((prev) => [...prev, ...res.data.items]);
       })
       .catch((e) => {});
   }, []);
