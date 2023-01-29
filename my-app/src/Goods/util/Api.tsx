@@ -21,8 +21,10 @@ const Api = () => {
         },
       })
       .then((res) => {
-        console.log(res, data);
-        setData((prev) => [...prev, ...res.data.items]);
+        if (res) {
+          setData((prev) => [...prev, ...res.data.items]);
+          console.log(res, data);
+        }
       })
       .catch((e) => {});
   }, [data]);
