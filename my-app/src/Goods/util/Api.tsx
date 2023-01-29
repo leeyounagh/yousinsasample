@@ -8,6 +8,7 @@ import styled from "styled-components";
 
 const Api = () => {
   let [data, setData] = useState<any[]>([]);
+  let testData: any[] = [];
   useEffect(() => {
     axios
       .get("/v1/search/shop.json", {
@@ -21,10 +22,10 @@ const Api = () => {
         },
       })
       .then((res) => {
-        if (res) {
-          setData((prev) => [...prev, ...res.data.items]);
-          console.log(res, data);
-        }
+        // setData((prev) => [...prev, ...res.data.items]);
+        // console.log(res, data);
+        testData.push(res.data.items);
+        console.log(testData);
       })
       .catch((e) => {});
   }, [data]);
